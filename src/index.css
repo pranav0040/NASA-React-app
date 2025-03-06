@@ -2,7 +2,7 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
+min-height:100vh;
   color: white;
   background-color: #030615;
 
@@ -28,6 +28,7 @@
   flex-direction: column;
   max-height: 100vh;
   width: 100%;
+  overflow: hidden;
 }
 .bgImage {
   width: 100%;
@@ -35,6 +36,9 @@
   flex: 1;
   object-fit: cover;
 }
+
+
+
 footer {
   position: fixed;
   bottom: 0;
@@ -57,27 +61,32 @@ footer h2{
   z-index: -1;
   inset: 0;
 }
-.sidebar{
- position:fixed;
- inset: 0; 
- display: flex; 
- flex-direction: column;
- z-index: 10; 
+
+.sidebar {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 20;
 }
-.sidebarContents {
-  z-index: 15;
+
+ .sidebarContents {
+  color: white;
+  z-index: 25;
   position: relative;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 1rem;
-  overflow-y: scroll;
+  padding: 1.5rem;
+  overflow-y: auto;
   height: 100%;
   width: 80%;
   max-width: 800px;
   margin-left: auto;
   background: #030615;
-}
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+} 
+ 
 .sidebarContents div{
   flex:1;
 }
@@ -113,12 +122,12 @@ footer h2{
     transform:rotate(360deg)
   }
 }
+
 .bgOverlay {
   position: absolute;
   inset: 0;
-  background: #07070b6c;
-  opacity: 0.6;
-  z-index:5;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 15;
 }
 @media (min-width:640px){
   .sidebar {

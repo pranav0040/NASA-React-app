@@ -1,5 +1,6 @@
 export default function SideBar(props){
     const { handleToggleModal, data } = props;
+  
     return(<div className="sidebar">
         <div className="bgOverlay" onClick={handleToggleModal}></div>
         <div className="sidebarContents">
